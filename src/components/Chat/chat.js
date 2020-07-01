@@ -1,7 +1,16 @@
 export default {
-    name: 'chat', data() {
+    name: 'chat',
+    methods: {
+        send_message(){
+            this.messages.push(this.message)
+            this.message = ""
+        }
+    },
+    data() {
         return {
-            channels: ["general", "random"]
+            channels: ["general", "random"],
+            message: "",
+            messages: []
         }
     }
 }
